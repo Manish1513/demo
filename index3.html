@@ -30,12 +30,13 @@
    </div>
   </div>
 <script>
-    var secondItem = document.querySelector("#items li:nth-child(2)");
-    secondItem.style.color = "green";
-    var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
-    oddItems.forEach(function(item) {
-      item.style.backgroundColor = "green";
-      } )
+       var headerTitle = document.querySelector("#header-title");
+    var helloWorldText = document.createTextNode("Hello World ");
+    headerTitle.parentElement.insertBefore(helloWorldText, headerTitle);
+    var itemList = document.querySelector("#items");
+    var helloText = document.createTextNode("Hello ");
+    var firstItem = itemList.firstElementChild;
+    itemList.insertBefore(helloText, firstItem);
 </script>
 </body>
 </html>
