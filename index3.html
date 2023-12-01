@@ -30,10 +30,12 @@
    </div>
   </div>
 <script>
-     var secondItem = document.querySelector("#items li:nth-child(2)");
-    secondItem.style.backgroundColor = "green";
-    var thirdItem = document.querySelector("#items li:nth-child(3)");
-    thirdItem.style.display = "none"
+    var secondItem = document.querySelector("#items li:nth-child(2)");
+    secondItem.style.color = "green";
+    var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
+    oddItems.forEach(function(item) {
+      item.style.backgroundColor = "green";
+      } )
 </script>
 </body>
 </html>
